@@ -1,6 +1,4 @@
-class Solution:
-    def canFinish(self, numCourses: int, prerequisites: List[List[int]]) -> bool:
-        from collections import defaultdict
+from collections import defaultdict
 from typing import List
 
 class Solution:
@@ -40,4 +38,9 @@ class Solution:
                 return False
 
         return True
+
+
+        
+
+        
         
