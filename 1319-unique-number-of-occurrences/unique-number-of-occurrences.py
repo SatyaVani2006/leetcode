@@ -1,10 +1,20 @@
 class Solution:
     def uniqueOccurrences(self, arr: List[int]) -> bool:
-        freq = Counter(arr)
-        values = list(freq.values())
-        if len(values) == len(set(values)):
-            return True
-        return False
+        d=dict()
+        for num in arr:
+            if num in d:
+                d[num]+=1
+            else:
+                d[num]=1
+        s1=set()
+        for (k,v) in d.items():
+            if v in s1:
+                return False
+            else:
+                s1.add(v)
+        return True
+
+        
          
 
         
